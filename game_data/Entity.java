@@ -2,17 +2,19 @@ package game_data;
 
 public class Entity {
     //Id allows creating lists to be much easier. For ex. entities with id's between 100-1000 are characters. and 1000-10000 are enemies
-    private String id;
+    private int id;
     private String name;
     private int hp;
     private int atk;
     private int def;
-    private float spd;
+    private int spd;
 
+    //Entity Constructor
     public Entity(String name) {
-        this(name, 0, 0, 0, 0);
+        this(0, name, 0, 0, 0, 0);
     }
-    public Entity(String name, int hp, int atk, int def, float spd) {
+    public Entity(int id, String name, int hp, int atk, int def, int spd) {
+        this.id = id;
         this.name = name;
         this.hp = hp;
         this.atk = atk;
@@ -20,6 +22,8 @@ public class Entity {
         this.spd = spd;
     }
 
+    //get Methods
+    public int getId() {return id;}
     public String getName() {
         return name;
     }
@@ -32,10 +36,12 @@ public class Entity {
     public int getDEF() {
         return def;
     }
-    public float getSPD() {
+    public int getSPD() {
         return spd;
     }
 
+    //set Methods
+    public void setId(int id) {this.id = id;}
     public void setName(String name) {
         this.name = name;
     }
@@ -48,11 +54,12 @@ public class Entity {
     public void setDEF(int def) {
         this.def = def;
     }
-    public void setSPD(float spd) {
+    public void setSPD(int spd) {
         this.spd = spd;
     }
 
+    //toString for entity variables.
     public String toString() {
-        return String.format("Name: %s\nHP: %d\nATK: %d\nDEF: %d\nSPD: %.2f", name, hp, atk, def, spd);
+        return String.format("Name: %s\nHP: %d\nATK: %d\nDEF: %d\nSPD: %df", name, hp, atk, def, spd);
     }
 }

@@ -1,4 +1,5 @@
 package game_data;
+import java.util.Arrays;
 
 public class Character {
     private String path;
@@ -6,9 +7,13 @@ public class Character {
     private int rarity;
     private Entity base;
 
-    //Current Paths as of HSR V3.2
+    //Current playable Paths as of HSR V3.2
     private static final String[] pathsList =
             {"Destruction", "Hunt", "Erudition", "Harmony", "Nihility", "Preservation", "Abundance", "Remembrance"};
+
+    //Current playable Elements as of HSR V3.2
+    private static final String[] elemsList =
+            {"Physical", "Fire", "Ice", "Lightning", "Wind", "Quantum", "Imaginary"};
 
     //game_data.Character Constructor
     public Character(String path, String element, int rarity, Entity base) {
@@ -19,17 +24,27 @@ public class Character {
     }
 
     //Derek: Might be redundant since we're going to code the characters but we allow users to create their own characters then this method might have uses.
-    //Method Checks if Path is valid.
+    //But it could also be useful to avoid logic errors since this creates compile-time errors.
+    //Basically, logic err = program runs but not as intended vs compile-time = program doesn't run and we know something is def. wrong.
+
+    //Check Method if Path is valid.
     public boolean validPath(String[] array, String path) {
-        boolean validPath = false;
-        for (int i = 0; i < 8; ++i) {
-            if (path == array[i]) {
-                    validPath = true;
-                    break;
-            }
-        }
-        return validPath;
+        return Arrays.asList(pathsList).contains(path);
+//        This just checks if dictionary contains path and returns true or false without needing iterations (for loop). After reading this delete the noted code.
+//        boolean validPath = false;
+//        for (int i = 0; i < 8; ++i) {
+//            if (path.equals(array[i])) {
+//                    validPath = true;
+//                    break;
+//            }
+//        }
     }
+
+    //Check Method if Element is valid.
+    public boolean validElement(String[] array, String element) {
+        return Arrays.asList(elemsList).contains(element);
+    }
+
     //get Methods for Path, Elem, and Rarity
     public String getPath() {
         return path;
