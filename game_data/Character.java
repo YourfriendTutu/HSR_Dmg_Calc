@@ -15,16 +15,14 @@ public class Character extends Entity {
             {"Physical", "Fire", "Ice", "Lightning", "Wind", "Quantum", "Imaginary"};
 
     //game_data.Character Constructor
-    public Character(int id, int level, String name, int hp, int atk, int def, String path, int rarity) {
-        this(id, level, name, hp, atk, def, 0, 0, path, "Physical", rarity);
-    }
-    public Character(int id, int level, String name, int hp, int atk, int def, int spd, float critRate,
+    public Character(int id, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg, float elemRes,
                      String path, String element, int rarity) {
-        super(id, level, name, hp, atk, def, spd, critRate);
+        super(id, name, hp, atk, def, spd, cr, cd, bonusDmg, elemRes);
         if (!validPath(pathsList, path)) {throw new IllegalArgumentException("Invalid path.");}
         this.path = path;
         if (!validElement(elemsList, element)) {throw new IllegalArgumentException("Invalid element.");}
         this.element = element;
+        if (!(rarity >= 3 && rarity <= 5)) {throw new IllegalArgumentException("Invalid rarity.");}
         this.rarity = rarity;
     }
 
@@ -32,7 +30,7 @@ public class Character extends Entity {
     //But it could also be useful to avoid logic errors since this creates compile-time errors.
     //Basically, logic err = program runs but not as intended vs compile-time = program doesn't run and we know something is def. wrong.
 
-    //Rebecca: Was more thinking to use it as validation in constructor, just following the textbook examples.
+    //Rebecca: Was more thinking to use it as validation in constructor and set, following textbook examples.
     //see additions with throw exceptions
 
     //Check Method if Path is valid.
@@ -44,15 +42,9 @@ public class Character extends Entity {
     }
 
     //get Methods for Path, Elem, and Rarity
-    public String getPath() {
-        return path;
-    }
-    public String getElement() {
-        return element;
-    }
-    public int getRarity() {
-        return rarity;
-    }
+    public String getPath() {return path;}
+    public String getElement() {return element;}
+    public int getRarity() {return rarity;}
 
     //set Methods for Path, Elem, and Rarity
     public void setPath(String path) {
@@ -64,17 +56,11 @@ public class Character extends Entity {
         this.element = element;
     }
     public void setRarity(int rarity) {
+        if (!(rarity >= 3 && rarity <= 5)) {throw new IllegalArgumentException("Invalid rarity.");}
         this.rarity = rarity;
     }
 
-    //Derek: "Show example use case for this because I'm not sure what this is for(Purpose).
-    //Rebecca: Placeholder for me to check displaying/checking character information is correct.
+    //Derek: Show example use case for this because I'm not sure what this is for(Purpose).
+    //Rebecca: Removed in favor of using Entity toString()
 
-    //toString method for showing Path, Element, and Rarity.
-    public String toString() {
-        return String.format("ID: %d\nName: %s\nElement: %s\nPath: %s\nRarity: %d*\nLevel: %d\n" +
-                        "HP: %d\nATK: %d\nDEF: %d\nSPD: %d\nCRIT Rate: %f",
-                getId(),getName(), element, path, rarity, getLevel(),
-                getHP(), getATK(), getDEF(), getSPD(), getCR());
-    }
 }
