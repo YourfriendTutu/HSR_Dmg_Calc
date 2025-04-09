@@ -15,8 +15,14 @@ public class Entity {
 
     //Entity Constructor
     public Entity() {this(0,"",0,0,0,0,0.05F,0.5F,0.0F,0.2F);}
-    public Entity(String name, int hp, int atk, int def, float cr, float cd) {
-        this(0, name, hp, atk, def, 0, cr, cd, 0, 0);
+    public Entity(int id, String name, int hp, int atk, int def, float cr, float cd) {
+        this(id, name, hp, atk, def, 0, cr, cd, 0, 0);
+    }
+    public Entity(int id, String name, int hp, int atk, int def, int spd, float elemRes) {
+        this(id, name, hp, atk, def, spd, 0, 0, 0, elemRes);
+    }
+    public Entity(int id, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg) {
+        this(id, name, hp, atk, def, spd, cr, cd, bonusDmg, 0);
     }
     public Entity(int id, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg, float elemRes) {
         this.id = id;

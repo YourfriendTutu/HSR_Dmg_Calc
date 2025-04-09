@@ -6,8 +6,8 @@ public class Lightcone extends Entity {
 
 
     //game_data.Lightcone Constructor
-    public Lightcone(String name, int hp, int atk, int def, float cr, float cd, String path, int rarity) {
-        super(name, hp, atk, def, cr, cd);
+    public Lightcone(int id, String name, int hp, int atk, int def, float cr, float cd, String path, int rarity) {
+        super(id, name, hp, atk, def, cr, cd);
         this.path = path;
         this.rarity = rarity;
     }
