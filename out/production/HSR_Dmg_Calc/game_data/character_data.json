@@ -1,0 +1,93 @@
+[
+  {
+    "path": "Destruction",
+    "element": "Lightning",
+    "rarity": 4,
+    "base": {
+      "id": 1001,
+      "name": "Arlan",
+      "hp": 1199,
+      "atk": 599,
+      "def": 330,
+      "spd": 102
+    }
+  },
+  {
+    "path": "Harmony",
+    "element": "Fire",
+    "rarity": 4,
+    "base": {
+      "id": 1002,
+      "name": "Asta",
+      "hp": 1023,
+      "atk": 511,
+      "def": 463,
+      "spd": 106
+    }
+  },
+  {
+    "path": "Abundance",
+    "element": "Lightning",
+    "rarity": 5,
+    "base": {
+      "id": 1003,
+      "name": "Abundance",
+      "hp": 1319,
+      "atk": 562,
+      "def": 485,
+      "spd": 98
+    }
+  },
+  {
+    "path": "Erudition",
+    "element": "Ice",
+    "rarity": 5,
+    "base": {
+      "id": 1061,
+      "name": "The Herta",
+      "hp": 1164,
+      "atk": 679,
+      "def": 485,
+      "spd": 99
+    }
+  },
+  {
+    "path": "Destruction",
+    "element": "Lightning",
+    "rarity": 5,
+    "base": {
+      "id": 9999,
+      "name": "Clark",
+      "hp": 1538,
+      "atk": 543,
+      "def": 443,
+      "spd": 107
+    }
+  },
+  {
+    "path": "Nihility",
+    "element": "Lightning",
+    "rarity": 5,
+    "base": {
+      "id": 9998,
+      "name": "Hao",
+      "hp": 812,
+      "atk": 416,
+      "def": 793,
+      "spd": 120
+    }
+  },
+  {
+    "path": "Abundance",
+    "element": "Imaginary",
+    "rarity": 5,
+    "base": {
+      "id": 9997,
+      "name": "Jason",
+      "hp": 1,
+      "atk": 1,
+      "def": 1,
+      "spd": 10000
+    }
+  }
+]

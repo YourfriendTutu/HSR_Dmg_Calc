@@ -1,13 +1,21 @@
-package game_data;
+package game_data.WIP;
+
+import game_data.Character;
+import game_data.Entity;
 
 public class Relic extends Entity {
     private String set;
     private String piece;
+    private float percent_hp;
+    private float percent_atk;
+    private float percent_def;
 
-    //game_data.Relic Constructor
-    public Relic(int id, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg,
-                 String set, String piece) {
-        super(id, name, hp, atk, def, spd, cr, cd, bonusDmg);
+
+
+    //game_data.WIP.Relic Constructor
+    public Relic(int id, String name, int hp, float percent_hp, int atk, float percent_atk, int def,
+                  float percent_def, int spd, float cr, float cd, float bonusDmg, String set, String piece) {
+        super(id, 'R', name, hp, atk, def, spd, cr, cd, bonusDmg);
         this.set = set;
         this.piece = piece;
     }
@@ -16,7 +24,7 @@ public class Relic extends Entity {
     private static final String[] setsList = {"Passerby of Wandering Cloud", "Musketeer of Wild Wheat",
             "Knight of Purity Palace", "Hunter of Glacial Forest", "Champion of Streetwise Boxing", "Guard of Wuthering Snow",
             "Firesmith of Lava-Forging", "Genius of Brilliant Stars", "Band of Sizzling Thunder", "Eagle of Twilight Line",
-            "Theif of Shooting Meteor", "Wastelander of Banditry Desert", "Longevous Disciple", "Messenger of Traversing Hackerspace",
+            "Thief of Shooting Meteor", "Wastelander of Banditry Desert", "Longevous Disciple", "Messenger of Traversing Hackerspace",
             "The Ashblazing Grand Duke", "Prisoner in Deep Confinement", "Pioneer Diver of Dead Waters",
             "Watchmaker, Master of Dream Machiantions", "Iron Cavalry Against the Scourge", "The Wind-Soaring Valorous",
             "Sacerdos' Relived Ordeal", "Scholar Lost in Erudition", "Hero of Triumphant Song", "Poet of Mourning Collapse",
@@ -29,11 +37,24 @@ public class Relic extends Entity {
 
     private static final String[] pieceList = {"Head", "Hands", "Body", "Feet", "Planar Sphere", "Link Rope"};
 
+    //get and set methods
     public String getSet() {return set;}
     public String getPiece() {return piece;}
     public void setSet() {this.set = set;}
     public void setPiece() {this.piece = piece;}
 
+    //User friendly create relic method
+    //Prompts user to choose Set
+    //Prompt to choose Piece
+    //Prompt to choose main stat
+    //Prompts for substats
+    //Run exception if substat type == main stat type
+    //Saves relic object to an array for easier relic management
+    //Prompt user to equip relic or not using equpRelic()
+
+
+    //Equip Relic Method
+    //Derek: Needs revision because there are flat stats and percent stats.
     public static void equipRelic(Character c, Relic r) {
         c.setHp(c.getHp() + r.getHp());
         c.setAtk(c.getAtk() + r.getAtk());
@@ -42,7 +63,13 @@ public class Relic extends Entity {
         c.setCr(c.getCr() + r.getCr());
         c.setCr(c.getCd() + r.getCd());
         c.setBonusDmg(c.getBonusDmg() + r.getBonusDmg());
+
     }
+
+    //Unequip Relic Method
+
+
+    //Delete Relic Object Method
 
 
 }

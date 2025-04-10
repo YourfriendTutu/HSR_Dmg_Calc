@@ -15,9 +15,9 @@ public class Character extends Entity {
             {"Physical", "Fire", "Ice", "Lightning", "Wind", "Quantum", "Imaginary"};
 
     //game_data.Character Constructor
-    public Character(int id, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg, float elemRes,
-                     String path, String element, int rarity) {
-        super(id, name, hp, atk, def, spd, cr, cd, bonusDmg, elemRes);
+    public Character(int id, String name, int hp, int atk, int def, int spd, String path, String element, int rarity) {
+        //Made it so cr,cd, bonus & elem are defaulted cause these stats are increased by traces which are conditional.
+        super(id, 'C', name, hp, atk, def, spd, 0.05F, 0.5F, 0.0F, 0.2F);
         if (!validPath(pathsList, path)) {throw new IllegalArgumentException("Invalid path.");}
         this.path = path;
         if (!validElement(elemsList, element)) {throw new IllegalArgumentException("Invalid element.");}
@@ -62,5 +62,18 @@ public class Character extends Entity {
 
     //Derek: Show example use case for this because I'm not sure what this is for(Purpose).
     //Rebecca: Removed in favor of using Entity toString()
+
+    //Equipped Lightcone variable
+    private Lightcone equippedLightcone;
+
+    //Get Lightcone Method
+    public Lightcone getEquippedLightcone() { return equippedLightcone; }
+
+    //Set Lightcone Method
+    public void setEquippedLightcone(Lightcone equippedLightcone) {
+        this.equippedLightcone = this.equippedLightcone;
+    }
+
+
 
 }
