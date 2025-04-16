@@ -1,11 +1,14 @@
-package game_data;
+package game_data.Lightcones;
+
+import game_data.Characters.Character;
+import game_data.Entity;
 
 public class Lightcone extends Entity {
     private String path;
     private int rarity;
 
 
-    //game_data.Lightcone Constructor
+    //game_data.Lightcones.Lightcone Constructor
     public Lightcone(int id, String name, int hp, int atk, int def, float cr, float cd, String path, int rarity) {
         super(id, 'L', name, hp, atk, def, cr, cd);
         this.path = path;
@@ -13,7 +16,7 @@ public class Lightcone extends Entity {
     }
 
     //Method to add LC stats to Character stats
-    public static void equipLC(Character c, Lightcone lc) {
+    public static void equipLC(game_data.Characters.Character c, Lightcone lc) {
         //If LC is already equipped, unequips current LC
         if (c.getEquippedLightcone() != null) {
             unequipLC(c);

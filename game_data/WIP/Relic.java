@@ -1,6 +1,6 @@
 package game_data.WIP;
 
-import game_data.Character;
+import game_data.Characters.Character;
 import game_data.Entity;
 
 public class Relic extends Entity {

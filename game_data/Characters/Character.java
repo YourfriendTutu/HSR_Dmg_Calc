@@ -1,5 +1,9 @@
-package game_data;
+package game_data.Characters;
+import game_data.Entity;
+import game_data.Lightcones.Lightcone;
+
 import java.util.Arrays;
+import java.util.List;
 
 public class Character extends Entity {
     private String path;
@@ -11,13 +15,13 @@ public class Character extends Entity {
             {"Destruction", "Hunt", "Erudition", "Harmony", "Nihility", "Preservation", "Abundance", "Remembrance"};
 
     //Current playable Elements as of HSR V3.2
-    private static final String[] elemsList =
-            {"Physical", "Fire", "Ice", "Lightning", "Wind", "Quantum", "Imaginary"};
+    private static final String[] elemsList = {"Physical", "Fire", "Ice", "Lightning", "Wind", "Quantum", "Imaginary"};
+
 
     //game_data.Character Constructor
     public Character(int id, String name, int hp, int atk, int def, int spd, String path, String element, int rarity) {
         //Made it so cr,cd, bonus & elem are defaulted cause these stats are increased by traces which are conditional.
-        super(id, 'C', name, hp, atk, def, spd, 0.05F, 0.5F, 0.0F, 0.2F);
+        super(id, 'C', name, hp, atk, def, spd, 0.05F, 0.5F, 0.0F, 0.0F);
         if (!validPath(pathsList, path)) {throw new IllegalArgumentException("Invalid path.");}
         this.path = path;
         if (!validElement(elemsList, element)) {throw new IllegalArgumentException("Invalid element.");}

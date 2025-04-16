@@ -144,7 +144,7 @@
         <mxCell id="IKDEtiL__KocLzmM_LxS-30" value="function to add relic stat to &#xa;character stat" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="IKDEtiL__KocLzmM_LxS-27" vertex="1">
           <mxGeometry y="64" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="r2yA_JhovFoHZwyBCx5l-3" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;i&gt;game_data.Lightcone&lt;/i&gt;&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="r2yA_JhovFoHZwyBCx5l-3" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;i&gt;game_data.Lightcones.Lightcone&lt;/i&gt;&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-120" y="110" width="160" height="146" as="geometry" />
         </mxCell>
         <mxCell id="r2yA_JhovFoHZwyBCx5l-4" value="- critRateInc : Float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="r2yA_JhovFoHZwyBCx5l-3">
