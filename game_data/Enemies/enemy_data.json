@@ -1,0 +1,19 @@
+[
+  {
+    "weaknesses": [
+      "Physical",
+      "Quantum"
+    ],
+    "id": 1001,
+    "category": "E",
+    "name": "Antibaryon",
+    "hp": 16429,
+    "atk": 718,
+    "def": 1150,
+    "spd": 109,
+    "cr": 0.0,
+    "cd": 0.0,
+    "bonusDmg": 0.0,
+    "elemRes": 0.0
+  }
+]
