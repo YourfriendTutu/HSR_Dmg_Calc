@@ -2,7 +2,7 @@ package game_data;
 
 
 //Superclass of objects in the game.
-public class Entity {
+public abstract class Entity {
     //Id allows creating lists to be much easier. For ex. entities with id's between 100-1000 are characters. and 1000-10000 are enemies
     //Two Variable ID system is structured and easy to read, doesnt need parsing, and DB efficient. Good habit for expansion compared to Int only IDs.
     private int id;
