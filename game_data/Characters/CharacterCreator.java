@@ -42,6 +42,10 @@ public class CharacterCreator {
         //The Herta
         game_data.Characters.Character the_herta = new game_data.Characters.Character(1061, "The Herta", 1164, 679, 485, 99, "Erudition", "Ice", 5);
 
+        //V3.2
+        //Anaxa
+        game_data.Characters.Character anaxa = new game_data.Characters.Character(1066,"Anaxa", 1164, 679, 485, 99, "Erudition", "Wind", 5);
+
         //Meme Entities(Friends)
         //Clark (He's my friend, just ignore this cause its funny)
         game_data.Characters.Character clark = new game_data.Characters.Character(9999, "Clark", 1538, 543, 443, 107, "Destruction", "Lightning", 5);
@@ -60,6 +64,7 @@ public class CharacterCreator {
         characters.add(asta);
         characters.add(bailu);
         characters.add(the_herta);
+        characters.add(anaxa);
 
         //Meme Characters
         characters.add(clark);
