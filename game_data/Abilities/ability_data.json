@@ -1,0 +1,30 @@
+[
+  {
+    "element": "Ice",
+    "id": 100061,
+    "category": "Q",
+    "name": "Did You Get It",
+    "elemDmg": 1.0
+  },
+  {
+    "element": "Ice",
+    "id": 100062,
+    "category": "E",
+    "name": "Big Brain Energy",
+    "elemDmg": 0.7
+  },
+  {
+    "element": "Ice",
+    "id": 100063,
+    "category": "E",
+    "name": "Hear Me Out",
+    "elemDmg": 1.0
+  },
+  {
+    "element": "Ice",
+    "id": 100064,
+    "category": "U",
+    "name": "Told Ya! Magic Happens",
+    "elemDmg": 2.0
+  }
+]
