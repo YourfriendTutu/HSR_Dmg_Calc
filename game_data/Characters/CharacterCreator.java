@@ -48,15 +48,15 @@ public class CharacterCreator {
 
         //Meme Entities(Friends)
         //Clark (He's my friend, just ignore this cause its funny)
-        game_data.Characters.Character clark = new game_data.Characters.Character(9999, "Clark", 1538, 543, 443, 107, "Destruction", "Lightning", 5);
+        //game_data.Characters.Character clark = new game_data.Characters.Character(9999, "Clark", 1538, 543, 443, 107, "Destruction", "Lightning", 5);
 
         //Hao (Local Whale)
-        game_data.Characters.Character hao = new game_data.Characters.Character(9998, "Hao", 812, 416, 793, 120, "Nihility", "Lightning", 5);
+        //game_data.Characters.Character hao = new game_data.Characters.Character(9998, "Hao", 812, 416, 793, 120, "Nihility", "Lightning", 5);
 
         //Jason (Bailu@home or you could just lose 50/50's to Bailu. On second thought, maybe winning Bailu is better than this dude)
         //Bro gets one tapped by a Destruction Trotter imagine.
         //Bonus Trace w/dodge mechanic scaling off spd?
-        game_data.Characters.Character jason = new game_data.Characters.Character(9997, "Jason", 1, 1, 1, 10000, "Abundance", "Imaginary", 5);
+        //game_data.Characters.Character jason = new game_data.Characters.Character(9997, "Jason", 1, 1, 1, 10000, "Abundance", "Imaginary", 5);
 
         //List of characters to add to Json file
         List<Character> characters = new ArrayList<>();
@@ -67,9 +67,9 @@ public class CharacterCreator {
         characters.add(anaxa);
 
         //Meme Characters
-        characters.add(clark);
-        characters.add(hao);
-        characters.add(jason);
+        //characters.add(clark);
+        //characters.add(hao);
+        //characters.add(jason);
 
         //Makes Json file readable and neat
         Gson gson = new GsonBuilder().setPrettyPrinting().create();

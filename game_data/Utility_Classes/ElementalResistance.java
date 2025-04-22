@@ -1,4 +1,4 @@
-package game_data;
+package game_data.Utility_Classes;
 
 import java.util.Arrays;
 import java.util.List;

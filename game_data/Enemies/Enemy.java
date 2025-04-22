@@ -3,8 +3,9 @@ package game_data.Enemies;
 import java.util.List;
 import java.util.Arrays;
 
-import game_data.ElementalResistance;
-import game_data.Entity;
+import game_data.Utility_Classes.ElementalResistance;
+import game_data.Utility_Classes.Entity;
+import game_data.Utility_Classes.Enums.StatTypes;
 
 public class Enemy extends Entity {
     private List<String> weaknesses;
@@ -36,5 +37,19 @@ public class Enemy extends Entity {
             ElementalResistance.setResistance(str, 0.0F);
         }
     }
+
+    private String getWeakness() {
+        return String.join(", ", weaknesses);
+    }
+
+    @Override
+    public String printStats() {return String.format("Enemy Stats: \n"
+    + "Name: %s\n"
+    + "Weaknesses: %s\n"
+    + "HP: %d\n"
+    + "ATK: %d\n"
+    + "DEF: %d\n"
+    + "SPD: %f\n",
+            getName(), getWeakness(), getStatValue(StatTypes.HP, Integer.class), getStatValue(StatTypes.ATK, Integer.class), getStatValue(StatTypes.DEF, Integer.class), getStatValue(StatTypes.SPD, Integer.class));}
 
 }

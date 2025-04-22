@@ -1,7 +1,7 @@
 package game_data.Lightcones;
 
 import game_data.Characters.Character;
-import game_data.Entity;
+import game_data.Utility_Classes.Entity;
 
 public class Lightcone extends Entity {
     private String path;

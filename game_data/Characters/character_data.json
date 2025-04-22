@@ -13,7 +13,7 @@
     "cr": 0.05,
     "cd": 0.5,
     "bonusDmg": 0.0,
-    "elemRes": 0.2
+    "elemRes": 0.0
   },
   {
     "path": "Harmony",
@@ -29,7 +29,7 @@
     "cr": 0.05,
     "cd": 0.5,
     "bonusDmg": 0.0,
-    "elemRes": 0.2
+    "elemRes": 0.0
   },
   {
     "path": "Abundance",
@@ -45,7 +45,7 @@
     "cr": 0.05,
     "cd": 0.5,
     "bonusDmg": 0.0,
-    "elemRes": 0.2
+    "elemRes": 0.0
   },
   {
     "path": "Erudition",
@@ -61,7 +61,7 @@
     "cr": 0.05,
     "cd": 0.5,
     "bonusDmg": 0.0,
-    "elemRes": 0.2
+    "elemRes": 0.0
   },
   {
     "path": "Erudition",
@@ -77,54 +77,6 @@
     "cr": 0.05,
     "cd": 0.5,
     "bonusDmg": 0.0,
-    "elemRes": 0.2
-  },
-  {
-    "path": "Destruction",
-    "element": "Lightning",
-    "rarity": 5,
-    "id": 9999,
-    "category": "C",
-    "name": "Clark",
-    "hp": 1538,
-    "atk": 543,
-    "def": 443,
-    "spd": 107,
-    "cr": 0.05,
-    "cd": 0.5,
-    "bonusDmg": 0.0,
-    "elemRes": 0.2
-  },
-  {
-    "path": "Nihility",
-    "element": "Lightning",
-    "rarity": 5,
-    "id": 9998,
-    "category": "C",
-    "name": "Hao",
-    "hp": 812,
-    "atk": 416,
-    "def": 793,
-    "spd": 120,
-    "cr": 0.05,
-    "cd": 0.5,
-    "bonusDmg": 0.0,
-    "elemRes": 0.2
-  },
-  {
-    "path": "Abundance",
-    "element": "Imaginary",
-    "rarity": 5,
-    "id": 9997,
-    "category": "C",
-    "name": "Jason",
-    "hp": 1,
-    "atk": 1,
-    "def": 1,
-    "spd": 10000,
-    "cr": 0.05,
-    "cd": 0.5,
-    "bonusDmg": 0.0,
-    "elemRes": 0.2
+    "elemRes": 0.0
   }
 ]

@@ -1,7 +1,7 @@
 package game_data.WIP;
 
 import game_data.Characters.Character;
-import game_data.Entity;
+import game_data.Utility_Classes.Entity;
 
 public class Relic extends Entity {
     private String set;
