@@ -125,6 +125,6 @@ public abstract class Entity {
     }
 
     //Override String for printing Stats
-    public abstract String printStats("Name: %s\n " );
+    public abstract String printStats();
 
 }

@@ -41,4 +41,5 @@ public abstract class CharacterAbilities {
     //prints ability information by using formatting 
     public String toString() {
         return String.format("%s (ID: %d, Element: %s, Hits: %d, Scaling: %s)", name, id, element, numOfHits, scalingAttributes.toString());
+    }
 }
