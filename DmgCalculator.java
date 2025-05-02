@@ -47,6 +47,7 @@ public class DmgCalculator extends JFrame{
 
         //Rebecca: GridLayout will need to be reworked to display equipped lightcone and enemy information
         //and damage calculations will need to be implemented to add associated calculate button and output field
+        //      idea for final is to use dropdown box for selecting character/lightcone/enemy in demo
     }
 
 }
