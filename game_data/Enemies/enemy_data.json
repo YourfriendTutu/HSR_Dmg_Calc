@@ -15,5 +15,23 @@
     "cd": 0.0,
     "bonusDmg": 0.0,
     "elemRes": 0.0
+  },
+  {
+    "weaknesses": [
+      "Physical",
+      "Ice",
+      "Imaginary"
+    ],
+    "id": 1500,
+    "category": "E",
+    "name": "Skaracabaz",
+    "hp": 812090,
+    "atk": 773,
+    "def": 1199,
+    "spd": 158,
+    "cr": 0.0,
+    "cd": 0.0,
+    "bonusDmg": 0.0,
+    "elemRes": 0.0
   }
 ]
