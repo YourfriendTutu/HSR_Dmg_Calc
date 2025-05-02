@@ -44,6 +44,9 @@ public class DmgCalculator extends JFrame{
         display.cdStat.setText(String.valueOf(the_herta.getCd()));
 
         display.rarity.setText(the_herta.printStars());
+
+        //Rebecca: GridLayout will need to be reworked to display equipped lightcone and enemy information
+        //and damage calculations will need to be implemented to add associated calculate button and output field
     }
 
 }
