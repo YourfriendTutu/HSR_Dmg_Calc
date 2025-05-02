@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Erudition",
+    "rarity": 5,
+    "id": 10061,
+    "category": "L",
+    "name": "Into the Unreachable Veil",
+    "hp": 952,
+    "atk": 635,
+    "def": 463,
+    "spd": 0,
+    "cr": 0.12,
+    "cd": 0.0,
+    "bonusDmg": 0.0,
+    "elemRes": 0.0
+  },
+  {
+    "path": "Erudition",
+    "rarity": 5,
+    "id": 10066,
+    "category": "L",
+    "name": "Life Should Be Cast to Flames",
+    "hp": 953,
+    "atk": 582,
+    "def": 529,
+    "spd": 0,
+    "cr": 0.0,
+    "cd": 0.0,
+    "bonusDmg": 0.0,
+    "elemRes": 0.0
+  }
+]

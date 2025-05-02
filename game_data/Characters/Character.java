@@ -64,6 +64,16 @@ public class Character extends Entity {
         this.rarity = rarity;
     }
 
+    //printStars method for displaying rarity in GUI
+    public String printStars() {
+        int numStars = getRarity();
+        return switch (numStars) {
+            case 4 -> "****";
+            case 5 -> "*****";
+            default -> "Error: Invalid rarity.";
+        };
+    }
+
     //printStats String method to get into the habit of using enum operations to reduce boilerplate
     //This is mainly just for practice, don't know if this will be used.
     @Override
