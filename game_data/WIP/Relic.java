@@ -2,6 +2,7 @@ package game_data.WIP;
 
 import game_data.Characters.Character;
 import game_data.Utility_Classes.Entity;
+import game_data.Utility_Classes.Enums.StatTypes;
 
 public class Relic extends Entity {
     private String set;
@@ -71,5 +72,19 @@ public class Relic extends Entity {
 
     //Delete Relic Object Method
 
+    @Override
+    public String printStats(){
+        return String.format("Relic Stats:\n"
+                        + "Name: %s\n"
+                        + "HP: %d\n"
+                        + "ATK: %d\n"
+                        + "DEF: %d\n"
+                        + "SPD: %d\n"
+                        + "CRIT Rate: %f\n"
+                        + "CRIT Dmg: %f\n"
+                , getName(), getStatValue(StatTypes.HP, Integer.class), getStatValue(StatTypes.ATK, Integer.class),
+                getStatValue(StatTypes.DEF, Integer.class), getStatValue(StatTypes.SPD, Integer.class), getStatValue(StatTypes.CRIT_RATE, Float.class),
+                getStatValue(StatTypes.CRIT_DMG, Float.class));
+    }
 
 }

@@ -33,9 +33,14 @@ public class EnemyCreator {
         //Antibaryon
         game_data.Enemies.Enemy antibaryon = new game_data.Enemies.Enemy(1001, "Antibaryon", 16429, 718, 1150, 109, 0.0F, Arrays.asList("Physical", "Quantum"));
 
+        //V1.6
+        //Skaracabaz
+        game_data.Enemies.Enemy skaracabaz = new game_data.Enemies.Enemy(1500, "Skaracabaz", 812090, 773, 1199, 158, 0.0F, Arrays.asList("Physical", "Ice", "Imaginary"));
+
         //List of enemies to add to Json file
         List<Enemy> enemies = new ArrayList<>();
         enemies.add(antibaryon);
+        enemies.add(skaracabaz);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
