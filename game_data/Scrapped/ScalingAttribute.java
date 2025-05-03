@@ -1,4 +1,4 @@
-package game_data.Utility_Classes;
+package game_data.Scrapped;
 
 public class ScalingAttribute {
     private String Attribute; //Character stats like HP, Atk, Def, etc.

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "abilityType": "BASIC",
+    "name": "Did You Get It?",
+    "element": "ICE",
+    "targetBehavior": "SINGLEATK",
+    "hitComponents": [
+      {
+        "splitRatio": 1.0,
+        "statType": "ATK",
+        "targetBehavior": "SINGLEATK"
+      }
+    ],
+    "maxUnitsAffected": 1
+  }
+]
