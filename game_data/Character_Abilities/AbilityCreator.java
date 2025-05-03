@@ -36,6 +36,7 @@ public class AbilityCreator {
     CharacterAbilities the_herta_basic = new BasicAbility(106101, "Did You Get It?", ElementTypes.ICE, TargetBehaviors.SINGLEATK,
             List.of(new HitComponent(StatTypes.ATK, 1.0f, TargetBehaviors.SINGLEATK)), 1);
 
+        //List of character abilities
         List<CharacterAbilities> characterAbilities = new ArrayList<>();
         characterAbilities.add(the_herta_basic);
 
