@@ -76,6 +76,7 @@ public class Character extends Entity {
 
     //printStats String method to get into the habit of using enum operations to reduce boilerplate
     //This is mainly just for practice, don't know if this will be used.
+    //Might need to add LC equipped on character.
     @Override
     public String printStats(){
         return String.format("Character Stats:\n"
@@ -96,6 +97,7 @@ public class Character extends Entity {
     //Rebecca: Removed in favor of using Entity toString()
 
     //Equipped Lightcone variable
+    //Might need to move up to other privates
     private Lightcone equippedLightcone;
 
     //Get Lightcone Method

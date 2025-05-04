@@ -12,7 +12,7 @@ public class HitComponent {
     private TargetBehaviors targetBehavior;
     private int numOfHits;
 
-    //Constructor
+    //Single-Hit Constructor
     public HitComponent(StatTypes statType, float splitRatio, TargetBehaviors targetBehavior) {
         this.statType = statType;
         this.splitRatio = splitRatio;
@@ -28,12 +28,13 @@ public class HitComponent {
         this.numOfHits = numOfHits;
     }
 
-    public String getStatType() {return statType.toString();}
+    //Getters
+    public StatTypes getStatType() {return statType;}
     public float getSplitRatio() {return splitRatio;}
     public TargetBehaviors getTargetBehavior() {return targetBehavior;}
     public int getNumOfHits() {return numOfHits;}
 
     public String toString(){
-        return String.format("Stat Type: %s, Target Behavior: %s, Split Ratio: %0.2f, Total Hits: %d", getStatType(), targetBehavior.toString(), getSplitRatio(), getNumOfHits());
+        return String.format("Stat Type: %s, Target Behavior: %s, Split Ratio: %0.2f, Total Hits: %d", statType.toString(), targetBehavior.toString(), getSplitRatio(), getNumOfHits());
     }
 }

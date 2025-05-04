@@ -22,10 +22,10 @@ public abstract class Entity {
     private float cr;
     private float cd;
     private float bonusDmg;
-    private float elemRes;
+
     private EnumMap<StatTypes, Float> stats;
 
-
+    private float elemRes;
     //Entity Constructor
     //default
     public Entity() {this(0, 'x', "",0,0,0,0,0.05F,0.5F,0.0F,0.2F);}
@@ -99,6 +99,7 @@ public abstract class Entity {
         };
         return type.cast(Value);
     }
+    //4000000000 >>
 
     //generics setter for all stat types using switch cases & enums.
     public <T> void setStatValue(StatTypes statType, T value) {
@@ -116,7 +117,7 @@ public abstract class Entity {
     }
 
     //toString for entity variables.
-    public String toString() {
+    public String toString() { //should probably change Catagory to use Enums instead of Char & String
         String EntityType = "";
         if (category == 'c') {EntityType = "Character";}
         else if (category == 'E') {EntityType = "Enemy";}

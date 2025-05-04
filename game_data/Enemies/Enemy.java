@@ -14,6 +14,7 @@ public class Enemy extends Entity {
     private static final List<String> elemsList = Arrays.asList("Physical", "Fire", "Ice", "Lightning", "Wind", "Quantum", "Imaginary");
 
     //game_data.Enemies.Enemy Constructor
+    //Need revision on elemRes
     public Enemy(int id, String name, int hp, int atk, int def, int spd, float elemRes, List<String> weaknesses) {
         super(id, 'E', name, hp, atk, def, spd, 0.0F);
         this.weaknesses = weaknesses;

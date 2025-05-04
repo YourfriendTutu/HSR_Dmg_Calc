@@ -14,5 +14,49 @@
       }
     ],
     "maxUnitsAffected": 1
+  },
+  {
+    "id": 106602,
+    "abilityType": "SKILL",
+    "name": "Fractal, Exiles Fallacy",
+    "element": "WIND",
+    "targetBehavior": "BOUNCE",
+    "hitComponents": [
+      {
+        "splitRatio": 0.7,
+        "statType": "ATK",
+        "targetBehavior": "SINGLEATK",
+        "numOfHits": 1
+      },
+      {
+        "splitRatio": 0.7,
+        "statType": "ATK",
+        "targetBehavior": "BOUNCE",
+        "numOfHits": 4
+      }
+    ],
+    "maxUnitsAffected": 5
+  },
+  {
+    "id": 106602,
+    "abilityType": "SKILL",
+    "name": "Fractal, Exiles Fallacy",
+    "element": "WIND",
+    "targetBehavior": "BOUNCE",
+    "hitComponents": [
+      {
+        "splitRatio": 0.7,
+        "statType": "ATK",
+        "targetBehavior": "SINGLEATK",
+        "numOfHits": 1
+      },
+      {
+        "splitRatio": 0.7,
+        "statType": "ATK",
+        "targetBehavior": "BOUNCE",
+        "numOfHits": 4
+      }
+    ],
+    "maxUnitsAffected": 5
   }
 ]

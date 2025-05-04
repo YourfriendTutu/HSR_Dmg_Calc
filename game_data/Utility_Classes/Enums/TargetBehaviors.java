@@ -11,5 +11,6 @@ public enum TargetBehaviors {
     AOEDEBUFF,
     SINGLEFOLLOWUP,
     BLASTFOLLOWUP,
+    BOUNCEFOLLOWUP,
     AOEFOLLOWUP
 }

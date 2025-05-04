@@ -8,7 +8,6 @@ public class Lightcone extends Entity {
     private String path;
     private int rarity;
 
-
     //game_data.Lightcones.Lightcone Constructor
     public Lightcone(int id, String name, int hp, int atk, int def, float cr, float cd, String path, int rarity) {
         super(id, 'L', name, hp, atk, def, cr, cd);
@@ -25,6 +24,7 @@ public class Lightcone extends Entity {
     public void setRarity(int rarity) {this.rarity = rarity;}
 
     //Method to add LC stats to Character stats
+    //Need better naming scheme for arguments c -> character & lc -> lightcone
     public static void equipLC(game_data.Characters.Character c, Lightcone lc) {
         //If LC is already equipped, unequips current LC
         if (c.getEquippedLightcone() != null) {
