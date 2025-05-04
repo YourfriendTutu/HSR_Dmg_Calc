@@ -10,18 +10,30 @@ public class HitComponent {
     private float splitRatio;
     private StatTypes statType;
     private TargetBehaviors targetBehavior;
+    private int numOfHits;
 
+    //Constructor
     public HitComponent(StatTypes statType, float splitRatio, TargetBehaviors targetBehavior) {
         this.statType = statType;
         this.splitRatio = splitRatio;
         this.targetBehavior = TargetBehaviors.SINGLEATK;
+        this.numOfHits = 1;
+    }
+
+    //Multi-Hit Constructor
+    public HitComponent(StatTypes statType, float splitRatio, TargetBehaviors targetBehavior, int numOfHits) {
+        this.statType = statType;
+        this.splitRatio = splitRatio;
+        this.targetBehavior = targetBehavior;
+        this.numOfHits = numOfHits;
     }
 
     public String getStatType() {return statType.toString();}
     public float getSplitRatio() {return splitRatio;}
     public TargetBehaviors getTargetBehavior() {return targetBehavior;}
+    public int getNumOfHits() {return numOfHits;}
 
     public String toString(){
-        return String.format("Stat Type: %s, Target Behavior: %s, Split Ratio: %0.2f", getStatType(), targetBehavior.toString(), getSplitRatio());
+        return String.format("Stat Type: %s, Target Behavior: %s, Split Ratio: %0.2f, Total Hits: %d", getStatType(), targetBehavior.toString(), getSplitRatio(), getNumOfHits());
     }
 }

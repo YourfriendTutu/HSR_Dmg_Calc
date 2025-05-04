@@ -33,12 +33,21 @@ public class AbilityCreator {
         //ID scheme: Use the character ID, add a 0, then use 1-5 to identify Ability Type using the following,
         //1 = Basic | 2 = Skill | 3 = Ultimate | 4 = Talent | 5 = Technique
         //The Herta Ex. Character Id = 1061, Basic = 01, Ability ID = 106101
+
+        //V3.0
+        //The Herta Abilities
     CharacterAbilities the_herta_basic = new BasicAbility(106101, "Did You Get It?", ElementTypes.ICE, TargetBehaviors.SINGLEATK,
             List.of(new HitComponent(StatTypes.ATK, 1.0f, TargetBehaviors.SINGLEATK)), 1);
+        //V3.2
+        //Anaxa Abilities
+    CharacterAbilities anaxa_skill = new SkillAbility(106602, "Fractal Exiles Fallacy", ElementTypes.WIND, TargetBehaviors.BOUNCE,
+            List.of(new HitComponent(StatTypes.ATK, 0.7F, TargetBehaviors.SINGLEATK),
+                    new HitComponent(StatTypes.ATK, 0.7F, TargetBehaviors.BOUNCE, 4)), 5);
 
         //List of character abilities
         List<CharacterAbilities> characterAbilities = new ArrayList<>();
         characterAbilities.add(the_herta_basic);
+        characterAbilities.add(anaxa_skill);
 
         //Makes Json file readable and neat
         Gson gson = new GsonBuilder().setPrettyPrinting().create();

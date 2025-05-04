@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": 106101,
     "abilityType": "BASIC",
     "name": "Did You Get It?",
     "element": "ICE",
@@ -9,7 +9,8 @@
       {
         "splitRatio": 1.0,
         "statType": "ATK",
-        "targetBehavior": "SINGLEATK"
+        "targetBehavior": "SINGLEATK",
+        "numOfHits": 1
       }
     ],
     "maxUnitsAffected": 1
