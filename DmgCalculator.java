@@ -1,6 +1,9 @@
 import javax.swing.*;
 import game_data.Characters.Character;
-import java.io.File;
+import game_data.Lightcones.Lightcone;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class DmgCalculator extends JFrame{
     private JPanel mainPanel;
@@ -14,40 +17,125 @@ public class DmgCalculator extends JFrame{
     private JTextField element;
     private JTextField rarity;
     private JTextField path;
+    private JComboBox characterSelect;
+    private JPanel characterPanel;
+    private JPanel lightconePanel;
+    private JTextField LCrarity;
+    private JTextField LCpath;
+    private JTextField lightconeName;
+    private JComboBox lightconeSelect;
+    private JTextField LCatkStat;
+    private JTextField LCdefStat;
+    private JTextField LCcrStat;
+    private JTextField LCcdStat;
+    private JTextField LChpStat;
+    private JPanel enemyPanel;
+    private JPanel selections;
+    private JComboBox abilitySelect;
+    private JComboBox enemySelect;
+    private JTextField enemyName;
+    private JButton button;
+    private JTextField textField1;
 
-    //get Methods for JTextFields
-    public JTextField getCharacterName() {return characterName;}
+    //Rebecca: enemy information and damage calculation action events still need to be implemented
+    public DmgCalculator() {
+        //Rebecca: Don't know how to retrieve data from json. Placeholder object creation to test functionality.
+        Character the_herta = new Character(1061, "The Herta", 1164, 679, 485, 99, "Erudition", "Ice", 5);
+        Character anaxa = new Character(1066,"Anaxa", 1164, 679, 485, 99, "Erudition", "Wind", 5);
+        Lightcone unreachable_veil = new Lightcone(10061, "Into the Unreachable Veil", 952, 635, 463, 0.12F, 0.0F, "Erudition", 5);
+        Lightcone cast_to_flames = new Lightcone(10066, "Life Should Be Cast to Flames", 953, 582, 529, 0.0F, 0.0F, "Erudition", 5);
+
+        //Rebecca: Don't know how to retrieve data from json. Placeholder gets from objects to test functionality.
+        characterSelect.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selected = (String) characterSelect.getSelectedItem();
+                Character c;
+                switch (selected) {
+                    case "The Herta":
+                        c = the_herta;
+                        break;
+                    case "Anaxa":
+                        c = anaxa;
+                        break;
+                    default:
+                        c = null;
+                        characterName.setText("");
+                        element.setText("");
+                        path.setText("");
+                        hpStat.setText("");
+                        atkStat.setText("");
+                        defStat.setText("");
+                        spdStat.setText("");
+                        crStat.setText("");
+                        cdStat.setText("");
+                        rarity.setText("");
+                        break;
+                }
+                if (c != null) {
+                    characterName.setText(c.getName());
+                    element.setText(c.getElement());
+                    path.setText(c.getPath());
+                    hpStat.setText(String.valueOf(c.getHp()));
+                    atkStat.setText(String.valueOf(c.getAtk()));
+                    defStat.setText(String.valueOf(c.getDef()));
+                    spdStat.setText(String.valueOf(c.getSpd()));
+                    crStat.setText(String.valueOf(c.getCr()));
+                    cdStat.setText(String.valueOf(c.getCd()));
+                    rarity.setText(c.printStars());
+                }
+            }
+        });
+        lightconeSelect.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selected = (String) lightconeSelect.getSelectedItem();
+                Lightcone lc;
+                switch (selected) {
+                    case "Into the Unreachable Veil":
+                        lc = unreachable_veil;
+                        break;
+                    case "Life Should Be Cast to Flames":
+                        lc = cast_to_flames;
+                        break;
+                    default:
+                        lc = null;
+                        lightconeName.setText("");
+                        LCpath.setText("");
+                        LChpStat.setText("");
+                        LCatkStat.setText("");
+                        LCdefStat.setText("");
+                        LCcrStat.setText("");
+                        LCcdStat.setText("");
+                        LCrarity.setText("");
+                        break;
+                }
+                if (lc != null) {
+                    lightconeName.setText(lc.getName());
+                    LCpath.setText(lc.getPath());
+                    LChpStat.setText(String.valueOf(lc.getHp()));
+                    LCatkStat.setText(String.valueOf(lc.getAtk()));
+                    LCdefStat.setText(String.valueOf(lc.getDef()));
+                    LCcrStat.setText(String.valueOf(lc.getCr()));
+                    LCcdStat.setText(String.valueOf(lc.getCd()));
+                    LCrarity.setText(lc.printStars());
+                }
+            }
+        });
+    }
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Star Rail Calculator");
+        JPanel mainPanel = new JPanel();
         DmgCalculator display = new DmgCalculator();
 
-        // sets and displays JFrame
+        // displays JFrame
         frame.setContentPane(display.mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
-        //Rebecca: Don't know how to retrieve data from json. Placeholder character creation to test functionality.
-        Character the_herta = new Character(1061, "The Herta", 1164, 679, 485, 99, "Erudition", "Ice", 5);
-
-        //setText methods for JTextFields to display character information
-        //Rebecca: Don't know how to retrieve data from json. Placeholder gets from character object to test functionality.
-        display.characterName.setText(the_herta.getName());
-        display.element.setText(the_herta.getElement());
-        display.path.setText(the_herta.getPath());
-        display.hpStat.setText(String.valueOf(the_herta.getHp()));
-        display.atkStat.setText(String.valueOf(the_herta.getAtk()));
-        display.defStat.setText(String.valueOf(the_herta.getDef()));
-        display.spdStat.setText(String.valueOf(the_herta.getSpd()));
-        display.crStat.setText(String.valueOf(the_herta.getCr()));
-        display.cdStat.setText(String.valueOf(the_herta.getCd()));
-
-        display.rarity.setText(the_herta.printStars());
-
-        //Rebecca: GridLayout will need to be reworked to display equipped lightcone and enemy information
-        //and damage calculations will need to be implemented to add associated calculate button and output field
-        //      idea for final is to use dropdown box for selecting character/lightcone/enemy in demo
     }
 
 }

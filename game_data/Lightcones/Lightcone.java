@@ -57,6 +57,16 @@ public class Lightcone extends Entity {
         c.setEquippedLightcone(null);
     }
 
+    //printStars method for displaying rarity in GUI
+    public String printStars() {
+        int numStars = getRarity();
+        return switch (numStars) {
+            case 4 -> "****";
+            case 5 -> "*****";
+            default -> "Error: Invalid rarity.";
+        };
+    }
+
     @Override
     public String printStats(){
         return String.format("Lightcone Stats:\n"
