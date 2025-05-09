@@ -16,26 +16,20 @@
     "maxUnitsAffected": 1
   },
   {
-    "id": 106602,
-    "abilityType": "SKILL",
-    "name": "Fractal, Exiles Fallacy",
+    "id": 106601,
+    "abilityType": "BASIC",
+    "name": "Pain, Brews Truth",
     "element": "WIND",
-    "targetBehavior": "BOUNCE",
+    "targetBehavior": "SINGLEATK",
     "hitComponents": [
       {
-        "splitRatio": 0.7,
+        "splitRatio": 1.0,
         "statType": "ATK",
         "targetBehavior": "SINGLEATK",
         "numOfHits": 1
-      },
-      {
-        "splitRatio": 0.7,
-        "statType": "ATK",
-        "targetBehavior": "BOUNCE",
-        "numOfHits": 4
       }
     ],
-    "maxUnitsAffected": 5
+    "maxUnitsAffected": 1
   },
   {
     "id": 106602,
