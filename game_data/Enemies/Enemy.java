@@ -39,7 +39,7 @@ public class Enemy extends Entity {
         }
     }
 
-    private String getWeakness() {
+    public String getWeakness() {
         return String.join(", ", weaknesses);
     }
 

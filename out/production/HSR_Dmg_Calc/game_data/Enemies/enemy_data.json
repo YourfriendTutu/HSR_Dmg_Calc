@@ -33,5 +33,23 @@
     "cd": 0.0,
     "bonusDmg": 0.0,
     "elemRes": 0.0
+  },
+  {
+    "weaknesses": [
+      "Ice",
+      "Lightning",
+      "Quantum"
+    ],
+    "id": 1550,
+    "category": "E",
+    "name": "Flame Reaver",
+    "hp": 1099706,
+    "atk": 773,
+    "def": 1199,
+    "spd": 174,
+    "cr": 0.0,
+    "cd": 0.0,
+    "bonusDmg": 0.0,
+    "elemRes": 0.0
   }
 ]

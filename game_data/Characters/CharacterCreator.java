@@ -24,6 +24,7 @@ public class CharacterCreator {
         }
     }
 
+
     //Main Code
     public static void main(String[] args) {
         //Characters are id from 1000-10000 Exclusive, by release version then alphabetically.

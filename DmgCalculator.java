@@ -1,9 +1,11 @@
 import javax.swing.*;
 import game_data.Characters.Character;
 import game_data.Lightcones.Lightcone;
+import game_data.Enemies.Enemy;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class DmgCalculator extends JFrame{
     private JPanel mainPanel;
@@ -35,15 +37,23 @@ public class DmgCalculator extends JFrame{
     private JComboBox enemySelect;
     private JTextField enemyName;
     private JButton button;
-    private JTextField textField1;
+    private JTextField dmg;
+    private JTextField weaknesses;
+    private JTextField EhpStat;
+    private JTextField EatkStat;
+    private JTextField EdefStat;
+    private JTextField EspdStat;
 
     //Rebecca: enemy information and damage calculation action events still need to be implemented
     public DmgCalculator() {
         //Rebecca: Don't know how to retrieve data from json. Placeholder object creation to test functionality.
+        // Cannot figure out how to use objects initialized under CharacterCreator directly.
         Character the_herta = new Character(1061, "The Herta", 1164, 679, 485, 99, "Erudition", "Ice", 5);
         Character anaxa = new Character(1066,"Anaxa", 1164, 679, 485, 99, "Erudition", "Wind", 5);
         Lightcone unreachable_veil = new Lightcone(10061, "Into the Unreachable Veil", 952, 635, 463, 0.12F, 0.0F, "Erudition", 5);
         Lightcone cast_to_flames = new Lightcone(10066, "Life Should Be Cast to Flames", 953, 582, 529, 0.0F, 0.0F, "Erudition", 5);
+        Enemy skaracabaz = new Enemy(1500, "Skaracabaz", 812090, 773, 1199, 158, 0.0F, Arrays.asList("Physical", "Ice", "Imaginary"));
+        Enemy flame_reaver = new Enemy(1550, "Flame Reaver", 1099706, 773, 1199, 174,0.0F, Arrays.asList("Ice", "Lightning", "Quantum"));
 
         //Rebecca: Don't know how to retrieve data from json. Placeholder gets from objects to test functionality.
         characterSelect.addActionListener(new ActionListener() {
@@ -120,6 +130,51 @@ public class DmgCalculator extends JFrame{
                     LCcdStat.setText(String.valueOf(lc.getCd()));
                     LCrarity.setText(lc.printStars());
                 }
+            }
+        });
+        enemySelect.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selected = (String) enemySelect.getSelectedItem();
+                Enemy y;
+                switch (selected) {
+                    case "Skaracabaz":
+                        y = skaracabaz;
+                        break;
+                    case "Flame Reaver":
+                        y = flame_reaver;
+                        break;
+                    default:
+                        y = null;
+                        enemyName.setText("");
+                        weaknesses.setText("");
+                        EhpStat.setText("");
+                        EatkStat.setText("");
+                        EdefStat.setText("");
+                        EspdStat.setText("");
+                        break;
+                }
+                if (y != null) {
+                    enemyName.setText(y.getName());
+                    weaknesses.setText(y.getWeakness());
+                    EhpStat.setText(String.valueOf(y.getHp()));
+                    EatkStat.setText(String.valueOf(y.getAtk()));
+                    EdefStat.setText(String.valueOf(y.getDef()));
+                    EspdStat.setText(String.valueOf(y.getSpd()));
+                }
+            }
+        });
+        abilitySelect.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Rebecca: Ideally, after reading damage formula code, I can implement reads from .json
+            }
+        });
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Rebecca: Probably use comboBoxName.getSelectedItem() to assign parameters for damage functions
+                // dmg.setText(String.valueOf()) to display calculated result
             }
         });
     }
