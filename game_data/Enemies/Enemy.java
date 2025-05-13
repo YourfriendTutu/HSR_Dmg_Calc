@@ -15,7 +15,7 @@ public class Enemy extends Entity {
 
     //game_data.Enemies.Enemy Constructor
     public Enemy(int id, String name, int hp, int atk, int def, int spd, List<String> weaknesses) {
-        super(id, 'E', name, hp, atk, def, spd, 0.0F);
+        super(id, 'E', name, hp, atk, def, spd);
         this.weaknesses = weaknesses;
         if (!hasValidWeaknesses()) {
             throw new IllegalArgumentException("Invalid weaknesses provided");

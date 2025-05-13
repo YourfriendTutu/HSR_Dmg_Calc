@@ -29,6 +29,10 @@ public abstract class Entity {
     //default
     public Entity() {this(0, 'x', "",0,0,0,0,0.05F,0.5F,0.0F);}
 
+    //w/o crit
+    public Entity(int id, char category, String name, int hp, int atk, int def, int spd) {
+        this(id, category, name, hp, atk, def, spd, 0, 0, 0);
+    }
     //w/o bonus_dmg
     public Entity(int id, char category, String name, int hp, int atk, int def, float cr, float cd) {
         this(id, category, name, hp, atk, def, 0, cr, cd, 0);
