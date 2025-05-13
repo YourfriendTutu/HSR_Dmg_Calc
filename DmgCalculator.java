@@ -1,7 +1,17 @@
 import javax.swing.*;
+
+import game_data.Character_Abilities.CharacterAbilities;
 import game_data.Characters.Character;
 import game_data.Lightcones.Lightcone;
 import game_data.Enemies.Enemy;
+import game_data.Utility_Classes.EnemyFormation;
+import game_data.Damage_Calculator.*;
+import game_data.Utility_Classes.Enums.ElementTypes;
+import game_data.Utility_Classes.Enums.StatTypes;
+import game_data.Utility_Classes.Enums.TargetBehaviors;
+import game_data.Utility_Classes.HitComponent;
+import game_data.Character_Abilities.BasicAbility;
+import game_data.Utility_Classes.HitComponent;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -170,11 +180,25 @@ public class DmgCalculator extends JFrame{
                 // Rebecca: Ideally, after reading damage formula code, I can implement reads from .json
             }
         });
+
+        HitComponent basic = new HitComponent(StatTypes.ATK, 120.0F, TargetBehaviors.SINGLEATK);
+        BasicAbility therta_basic = new BasicAbility(100500, "Did You Get It", ElementTypes.ICE, TargetBehaviors.SINGLEATK, Arrays.asList(basic), 1);
+        EnemyFormation boss = new EnemyFormation(Arrays.asList(skaracabaz));
+        DamageCalculator d = new DamageCalculator(the_herta, therta_basic, boss, 0);
+
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Rebecca: Probably use comboBoxName.getSelectedItem() to assign parameters for damage functions
-                // dmg.setText(String.valueOf()) to display calculated result
+                if ("The Herta".compareTo((String) characterSelect.getSelectedItem()) == 0) {
+                    if ("Basic".compareTo((String) abilitySelect.getSelectedItem()) == 0) {
+                        if ("Skaracabaz".compareTo((String) enemySelect.getSelectedItem()) == 0) {
+                            dmg.setText(String.valueOf(d.calculateBaseDamage()));
+                        }
+                    }
+                }
+                else {
+                    dmg.setText("");
+                }
             }
         });
     }

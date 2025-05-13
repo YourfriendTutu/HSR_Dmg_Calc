@@ -49,7 +49,7 @@ public class Enemy extends Entity {
     + "HP: %d\n"
     + "ATK: %d\n"
     + "DEF: %d\n"
-    + "SPD: %f\n",
+    + "SPD: %d\n",
             getName(), getWeakness(), getStatValue(StatTypes.HP, Integer.class), getStatValue(StatTypes.ATK, Integer.class), getStatValue(StatTypes.DEF, Integer.class), getStatValue(StatTypes.SPD, Integer.class));}
 
     public String getElement() {return "None";}
