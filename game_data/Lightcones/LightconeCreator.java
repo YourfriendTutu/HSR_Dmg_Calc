@@ -30,11 +30,11 @@ public class LightconeCreator {
 
         //V3.0
         //Into the Unreachable Veil
-        game_data.Lightcones.Lightcone unreachable_veil = new game_data.Lightcones.Lightcone(10061, "Into the Unreachable Veil", 952, 635, 463, 0.12F, 0.0F, "Erudition", 5);
+        game_data.Lightcones.Lightcone unreachable_veil = new game_data.Lightcones.Lightcone(10061, "Into the Unreachable Veil", 952, 635, 463, 0.12F, 0.0F, "Erudition", 5, "resources//lightcone_images/Light_Cone_Into_the_Unreachable_Veil_Artwork.png");
 
         //V3.2
         //Life Should Be Cast to Flames
-        game_data.Lightcones.Lightcone cast_to_flames = new game_data.Lightcones.Lightcone(10066, "Life Should Be Cast to Flames", 953, 582, 529, 0.0F, 0.0F, "Erudition", 5);
+        game_data.Lightcones.Lightcone cast_to_flames = new game_data.Lightcones.Lightcone(10066, "Life Should Be Cast to Flames", 953, 582, 529, 0.0F, 0.0F, "Erudition", 5, "resources//lightcone_images/Light_Cone_Life_Should_Be_Cast_to_Flames_Artwork.png");
 
         //List of characters to add to Json file
         List<Lightcone> lightcones = new ArrayList<>();

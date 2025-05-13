@@ -6,7 +6,9 @@ package game_data.Utility_Classes;
 import game_data.Utility_Classes.Enums.StatTypes;
 import game_data.Utility_Classes.Enums.TargetBehaviors;
 
-public class HitComponent {
+import java.io.Serializable;
+
+public class HitComponent implements Serializable {
     private float splitRatio;
     private StatTypes statType;
     private TargetBehaviors targetBehavior;

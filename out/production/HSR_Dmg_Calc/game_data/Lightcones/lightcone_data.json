@@ -2,6 +2,7 @@
   {
     "path": "Erudition",
     "rarity": 5,
+    "imagePath": "resources//lightcone_images/Light_Cone_Into_the_Unreachable_Veil_Artwork.png",
     "id": 10061,
     "category": "L",
     "name": "Into the Unreachable Veil",
@@ -11,12 +12,12 @@
     "spd": 0,
     "cr": 0.12,
     "cd": 0.0,
-    "bonusDmg": 0.0,
-    "elemRes": 0.0
+    "bonusDmg": 0.0
   },
   {
     "path": "Erudition",
     "rarity": 5,
+    "imagePath": "resources//lightcone_images/Light_Cone_Life_Should_Be_Cast_to_Flames_Artwork.png",
     "id": 10066,
     "category": "L",
     "name": "Life Should Be Cast to Flames",
@@ -26,7 +27,6 @@
     "spd": 0,
     "cr": 0.0,
     "cd": 0.0,
-    "bonusDmg": 0.0,
-    "elemRes": 0.0
+    "bonusDmg": 0.0
   }
 ]

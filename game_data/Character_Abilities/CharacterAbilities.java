@@ -5,9 +5,10 @@ import game_data.Utility_Classes.HitComponent;
 import game_data.Utility_Classes.Enums.TargetBehaviors;
 import game_data.Utility_Classes.Enums.ElementTypes;
 
+import java.io.Serializable;
 import java.util.List;
 
-public abstract class CharacterAbilities {
+public abstract class CharacterAbilities implements Serializable {
     private int id; //character Id + 0 + (1 = Basic | 2 = Skill | 3 = Ultimate | 4 = Talent | 5 = Technique) Ex. 106101 = 1061 The Herta, 01 = Basic
     private AbilityTypes abilityType; // BASIC | SKILL | ULTIMATE | TALENT | TECHNIQUE
     private String name;

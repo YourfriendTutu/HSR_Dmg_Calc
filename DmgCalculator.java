@@ -50,8 +50,8 @@ public class DmgCalculator extends JFrame{
         // Cannot figure out how to use objects initialized under CharacterCreator directly.
         Character the_herta = new Character(1061, "The Herta", 1164, 679, 485, 99, "Erudition", "Ice", 5);
         Character anaxa = new Character(1066,"Anaxa", 1164, 679, 485, 99, "Erudition", "Wind", 5);
-        Lightcone unreachable_veil = new Lightcone(10061, "Into the Unreachable Veil", 952, 635, 463, 0.12F, 0.0F, "Erudition", 5);
-        Lightcone cast_to_flames = new Lightcone(10066, "Life Should Be Cast to Flames", 953, 582, 529, 0.0F, 0.0F, "Erudition", 5);
+        Lightcone unreachable_veil = new Lightcone(10061, "Into the Unreachable Veil", 952, 635, 463, 0.12F, 0.0F, "Erudition", 5, "resources/lightcone_images/Light_Cone_Into_the_Unreachable_Veil_Artwork.png");
+        Lightcone cast_to_flames = new Lightcone(10066, "Life Should Be Cast to Flames", 953, 582, 529, 0.0F, 0.0F, "Erudition", 5, "resources/lightcone_images/Light_Cone_Life_Should_Be_Cast_to_Flames_Artwork.png");
         Enemy skaracabaz = new Enemy(1500, "Skaracabaz", 812090, 773, 1199, 158, Arrays.asList("Physical", "Ice", "Imaginary"));
         Enemy flame_reaver = new Enemy(1550, "Flame Reaver", 1099706, 773, 1199, 174, Arrays.asList("Ice", "Lightning", "Quantum"));
 

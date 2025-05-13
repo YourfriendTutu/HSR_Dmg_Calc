@@ -7,21 +7,25 @@ import game_data.Utility_Classes.Enums.StatTypes;
 public class Lightcone extends Entity {
     private String path;
     private int rarity;
+    private String imagePath;
 
     //game_data.Lightcones.Lightcone Constructor
-    public Lightcone(int id, String name, int hp, int atk, int def, float cr, float cd, String path, int rarity) {
+    public Lightcone(int id, String name, int hp, int atk, int def, float cr, float cd, String path, int rarity, String imagePath) {
         super(id, 'L', name, hp, atk, def, cr, cd);
         this.path = path;
         this.rarity = rarity;
+        this.imagePath = imagePath;
     }
 
     //get Methods
     public String getPath() {return this.path;}
     public int getRarity() {return this.rarity;}
+    public String getImagePath() {return this.imagePath;}
 
     //set Methods
     public void setPath(String path) {this.path = path;}
     public void setRarity(int rarity) {this.rarity = rarity;}
+    public void setImagePath(String imagePath) {this.imagePath = imagePath;}
 
     //Method to add LC stats to Character stats
     //Need better naming scheme for arguments c -> character & lc -> lightcone
