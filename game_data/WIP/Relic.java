@@ -87,4 +87,6 @@ public class Relic extends Entity {
                 getStatValue(StatTypes.CRIT_DMG, Float.class));
     }
 
+    public String getElement(){return "None";}
+
 }

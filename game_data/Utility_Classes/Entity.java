@@ -13,7 +13,7 @@ public abstract class Entity {
     //Id allows creating lists to be much easier. For ex. entities with id's between 100-1000 are characters. and 1000-10000 are enemies
     //Two Variable ID system is structured and easy to read, doesnt need parsing, and DB efficient. Good habit for expansion compared to Int only IDs.
     private int id;
-    private char category;
+    private char category; //redundant with Enums. Need to fix later in Character, LC, and Enemy classes.
     private String name;
     private int hp;
     private int atk;
@@ -25,24 +25,17 @@ public abstract class Entity {
 
     private EnumMap<StatTypes, Float> stats;
 
-    private float elemRes;
     //Entity Constructor
     //default
-    public Entity() {this(0, 'x', "",0,0,0,0,0.05F,0.5F,0.0F,0.2F);}
-    //w/o bonus_dmg & elem_res
-    public Entity(int id, char category, String name, int hp, int atk, int def, float cr, float cd) {
-        this(id, category, name, hp, atk, def, 0, cr, cd, 0, 0);
-    }
+    public Entity() {this(0, 'x', "",0,0,0,0,0.05F,0.5F,0.0F);}
+
     //w/o bonus_dmg
-    public Entity(int id,char category, String name, int hp, int atk, int def, int spd, float elemRes) {
-        this(id, category, name, hp, atk, def, spd, 0, 0, 0, elemRes);
+    public Entity(int id, char category, String name, int hp, int atk, int def, float cr, float cd) {
+        this(id, category, name, hp, atk, def, 0, cr, cd, 0);
     }
-    //w/o elem_res
-    public Entity(int id, char category, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg) {
-        this(id, category, name, hp, atk, def, spd, cr, cd, bonusDmg, 0);
-    }
+
     //Full Entity constructor
-    public Entity(int id, char category, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg, float elemRes) {
+    public Entity(int id, char category, String name, int hp, int atk, int def, int spd, float cr, float cd, float bonusDmg) {
         this.id = id;
         this.category = category;
         this.name = name;
@@ -53,7 +46,6 @@ public abstract class Entity {
         this.cr = cr;
         this.cd = cd;
         this.bonusDmg = bonusDmg;
-        this.elemRes = elemRes;
     }
 
     //get Methods
@@ -67,7 +59,6 @@ public abstract class Entity {
     public float getCr() {return cr;}
     public float getCd() {return cd;}
     public float getBonusDmg() {return bonusDmg;}
-    public float getElemRes() {return elemRes;}
 
     //set Methods
     public void setId(int id) {this.id = id;}
@@ -80,7 +71,6 @@ public abstract class Entity {
     public void setCr(float cr) {this.cr = cr;}
     public void setCd(float cd) {this.cd = cd;}
     public void setBonusDmg(float bonusDmg) {this.bonusDmg = bonusDmg;}
-    public void setElemRes(float elemRes) {this.elemRes = elemRes;}
 
     //Using generics, switch cases, & enums to make a flexible get method that works for all stat types.
     //I used the usual getters and setters to consolidate into this method.
@@ -94,7 +84,7 @@ public abstract class Entity {
             case CRIT_RATE -> getCr();
             case CRIT_DMG -> getCd();
             case BONUS_DMG -> getBonusDmg();
-            case ELEM_RES -> getElemRes();
+            case ELEM_RES -> ElementalResistance.getAllResistance();
             default -> throw new IllegalArgumentException("Invalid stat type." + statType);
         };
         return type.cast(Value);
@@ -111,21 +101,18 @@ public abstract class Entity {
             case CRIT_RATE -> setCr((float)value);
             case CRIT_DMG -> setCd((float)value);
             case BONUS_DMG -> setBonusDmg((float)value);
-            case ELEM_RES -> setElemRes((float)value);
+            case ELEM_RES -> ElementalResistance.getResistance(value.toString());
             default -> throw new IllegalArgumentException("Invalid stat type." + statType);
         }
     }
 
-    //toString for entity variables.
-    public String toString() { //should probably change Catagory to use Enums instead of Char & String
-        String EntityType = "";
-        if (category == 'c') {EntityType = "Character";}
-        else if (category == 'E') {EntityType = "Enemy";}
-        else if (category == 'L') {EntityType = "Lightcone";}
-        return String.format("Entity Type: %s\nName: %s\nHP: %d\nATK: %d\nDEF: %d\nSPD: %d\nCRIT Rate: %f\nCRIT Dmg: %f\n", EntityType, name, hp, atk, def, spd, cr, cd);
-    }
+    public abstract String getElement();
 
     //Override String for printing Stats
     public abstract String printStats();
 
+    //toString for entity variables.
+    public String toString() { //should probably change Catagory to use Enums instead of Char & String
+        return String.format("Entity Type: %s\nName: %s\nHP: %d\nATK: %d\nDEF: %d\nSPD: %d\nCRIT Rate: %f\nCRIT Dmg: %f\n", getClass().getSimpleName(), name, hp, atk, def, spd, cr, cd);
+    }
 }

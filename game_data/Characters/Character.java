@@ -21,7 +21,7 @@ public class Character extends Entity {
     //game_data.Character Constructor
     public Character(int id, String name, int hp, int atk, int def, int spd, String path, String element, int rarity) {
         //Made it so cr,cd, bonus & elem are defaulted cause these stats are increased by traces which are conditional.
-        super(id, 'C', name, hp, atk, def, spd, 0.05F, 0.5F, 0.0F, 0.0F);
+        super(id, 'C', name, hp, atk, def, spd, 0.05F, 0.5F, 0.0F);
         if (!validPath(pathsList, path)) {throw new IllegalArgumentException("Invalid path.");}
         this.path = path;
         if (!validElement(elemsList, element)) {throw new IllegalArgumentException("Invalid element.");}

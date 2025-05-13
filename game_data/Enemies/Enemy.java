@@ -14,8 +14,7 @@ public class Enemy extends Entity {
     private static final List<String> elemsList = Arrays.asList("Physical", "Fire", "Ice", "Lightning", "Wind", "Quantum", "Imaginary");
 
     //game_data.Enemies.Enemy Constructor
-    //Need revision on elemRes
-    public Enemy(int id, String name, int hp, int atk, int def, int spd, float elemRes, List<String> weaknesses) {
+    public Enemy(int id, String name, int hp, int atk, int def, int spd, List<String> weaknesses) {
         super(id, 'E', name, hp, atk, def, spd, 0.0F);
         this.weaknesses = weaknesses;
         if (!hasValidWeaknesses()) {
@@ -52,5 +51,7 @@ public class Enemy extends Entity {
     + "DEF: %d\n"
     + "SPD: %f\n",
             getName(), getWeakness(), getStatValue(StatTypes.HP, Integer.class), getStatValue(StatTypes.ATK, Integer.class), getStatValue(StatTypes.DEF, Integer.class), getStatValue(StatTypes.SPD, Integer.class));}
+
+    public String getElement() {return "None";}
 
 }

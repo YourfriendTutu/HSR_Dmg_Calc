@@ -1,7 +1,10 @@
 package game_data.Utility_Classes;
 
+import game_data.Utility_Classes.Enums.ElementTypes;
+
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ElementalResistance {
@@ -25,6 +28,19 @@ public class ElementalResistance {
     public static float getResistance(String element) {
         return elemResistances.getOrDefault(element, 0.0f);
     }
+
+    public static String getAllResistance() {
+        StringBuilder allResistances = new StringBuilder("Elemental Resistances: \n");
+
+        for (Map.Entry<String, Float> entry : elemResistances.entrySet()) {
+            allResistances.append(entry.getKey())
+                    .append(": ")
+                    .append(entry.getValue())
+                    .append("\n");
+        }
+        return allResistances.toString();
+    }
+
     //Setter for elemental resistance
     public static void setResistance(String element, float resistance) {
         elemResistances.put(element, resistance);

@@ -82,4 +82,6 @@ public class Lightcone extends Entity {
                 getStatValue(StatTypes.DEF, Integer.class), getStatValue(StatTypes.SPD, Integer.class), getStatValue(StatTypes.CRIT_RATE, Float.class),
                 getStatValue(StatTypes.CRIT_DMG, Float.class));
     }
+
+    public String getElement() {return "None";}
 }
