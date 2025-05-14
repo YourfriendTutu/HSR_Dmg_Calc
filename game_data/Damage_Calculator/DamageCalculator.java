@@ -53,6 +53,11 @@ public class DamageCalculator {
     //otherwise = 1
     public int calculateBaseCriticalDamage() { //Crit Damage Calc
         //Crit Multiplier = BaseDamage * (1 + CRIT DMG%)
+        float CriticalDamageDone = calculateBaseDamage() * (1 + character.getCd());
+        return (int) CriticalDamageDone;
+    }
+
+     public int calculateCriticalDamage() {
         float CriticalDamageDone = calculateDamage() * (1 + character.getCd());
         return (int) CriticalDamageDone;
     }
